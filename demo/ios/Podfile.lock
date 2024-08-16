@@ -1,0 +1,28 @@
+PODS:
+  - Flutter (1.0.0)
+  - im_flutter_sdk_push (0.0.1):
+    - Flutter
+  - im_flutter_sdk_push_ios (0.0.1):
+    - Flutter
+
+DEPENDENCIES:
+  - Flutter (from `Flutter`)
+  - im_flutter_sdk_push (from `.symlinks/plugins/im_flutter_sdk_push/ios`)
+  - im_flutter_sdk_push_ios (from `.symlinks/plugins/im_flutter_sdk_push_ios/ios`)
+
+EXTERNAL SOURCES:
+  Flutter:
+    :path: Flutter
+  im_flutter_sdk_push:
+    :path: ".symlinks/plugins/im_flutter_sdk_push/ios"
+  im_flutter_sdk_push_ios:
+    :path: ".symlinks/plugins/im_flutter_sdk_push_ios/ios"
+
+SPEC CHECKSUMS:
+  Flutter: e0871f40cf51350855a761d2e70bf5af5b9b5de7
+  im_flutter_sdk_push: d52a1ace65c26b69404ded9a0f68205cb6d98657
+  im_flutter_sdk_push_ios: 76b5955f67c669ab9db76132300072f0eefd5a2b
+
+PODFILE CHECKSUM: 6e700dec67e6deac9b1c69bb14c49a2217a12d15
+
+COCOAPODS: 1.15.2

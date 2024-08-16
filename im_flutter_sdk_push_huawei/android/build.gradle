@@ -1,0 +1,51 @@
+group = "com.ease.im_flutter_sdk_push_huawei"
+version = "1.0"
+
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+        maven { url 'https://developer.huawei.com/repo/' }
+    }
+
+    dependencies {
+        classpath("com.android.tools.build:gradle:7.3.0")
+        classpath 'com.huawei.agconnect:agcp:1.9.1.301'
+    }
+}
+
+rootProject.allprojects {
+    repositories {
+        google()
+        mavenCentral()
+        maven { url 'https://developer.huawei.com/repo/' }
+    }
+}
+
+apply plugin: "com.android.library"
+
+android {
+    if (project.android.hasProperty("namespace")) {
+        namespace = "com.ease.im_flutter_sdk_push_huawei"
+    }
+
+    compileSdk = 33
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+
+    defaultConfig {
+        minSdk = 21
+        consumerProguardFiles 'consumer-proguard-rules.txt'
+    }
+
+    dependencies {
+        implementation 'com.huawei.hms:push:6.12.0.300'
+    }
+}
+
+dependencies {
+    implementation project(path: ':im_flutter_sdk_push')
+}

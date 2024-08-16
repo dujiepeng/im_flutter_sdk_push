@@ -1,0 +1,4 @@
+-dontwarn com.vivo.push.** 
+-keep class com.vivo.push.**{*; } 
+-keep class com.vivo.vms.**{*; }
+-keep class com.ease.im_flutter_sdk_push_vivo.vivo.VivoMessageService{*;}

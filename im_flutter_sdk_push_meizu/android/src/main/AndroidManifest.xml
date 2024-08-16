@@ -1,0 +1,17 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+  package="com.ease.im_flutter_sdk_push_meizu">
+    <uses-permission android:name="android.Manifest.permission.POST_NOTIFICATIONS" android:minSdkVersion="33"/>
+    <application>
+        <receiver android:name="com.ease.im_flutter_sdk_push_meizu.meizu.MeiZuMessageService"
+            android:exported="true"
+            android:permission="com.meizu.cloud.push.permission.MESSAGE">
+            <intent-filter>
+                <action android:name="com.meizu.flyme.push.intent.MESSAGE" />
+                <action android:name="com.meizu.flyme.push.intent.REGISTER.FEEDBACK" />
+                <action
+                    android:name="com.meizu.flyme.push.intent.UNREGISTER.FEEDBACK"/>
+                <category android:name="${applicationId}" />
+            </intent-filter>
+        </receiver>
+    </application>
+</manifest>

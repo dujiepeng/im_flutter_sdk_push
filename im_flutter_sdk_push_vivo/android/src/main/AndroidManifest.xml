@@ -1,0 +1,29 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.ease.im_flutter_sdk_push_vivo">
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <application>
+        <receiver android:name="com.ease.im_flutter_sdk_push_vivo.vivo.VivoMessageService"
+            android:exported="true">
+            <intent-filter>
+                <!--接收push消息-->
+                <action android:name="com.vivo.pushclient.action.RECEIVE"/>
+            </intent-filter>
+        </receiver>
+        <meta-data tools:replace="android:value"
+            android:name="com.vivo.push.api_key"
+            android:value="您应用分配的证书 APPKEY" />
+        <meta-data tools:replace="android:value"
+            android:name="com.vivo.push.app_id"
+            android:value="您应用分配的证书 APPID" />
+
+        <service
+            android:name="com.vivo.push.sdk.service.CommandClientService"
+            android:permission="com.push.permission.UPSTAGESERVICE"
+            android:exported="true"/>
+
+        <meta-data
+            android:name="sdk_version_vivo"
+            android:value="500"/>
+    </application>
+</manifest>
