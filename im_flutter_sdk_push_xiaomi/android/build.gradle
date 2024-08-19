@@ -35,20 +35,14 @@ android {
 
     defaultConfig {
         minSdk = 21
+        consumerProguardFiles 'consumer-proguard-rules.txt'
     }
 
     dependencies {
-        testImplementation("junit:junit:4.13.2")
-        testImplementation("org.mockito:mockito-core:5.0.0")
+        implementation 'com.tencent.timpush:xiaomi-vendor:5.9.9'
     }
+}
 
-    testOptions {
-        unitTests.all {
-            testLogging {
-               events "passed", "skipped", "failed", "standardOut", "standardError"
-               outputs.upToDateWhen {false}
-               showStandardStreams = true
-            }
-        }
-    }
+dependencies {
+    implementation project(path: ':im_flutter_sdk_push')
 }

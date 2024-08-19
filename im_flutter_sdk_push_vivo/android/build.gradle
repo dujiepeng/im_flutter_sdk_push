@@ -40,8 +40,6 @@ android {
 
 
     dependencies {
-//        implementation 'com.tencent.timpush:timpush:7.9.5668'
-//        implementation 'com.tencent.timpush:vivo:7.9.5668'
         implementation 'com.tencent.timpush:vivo-vendor:4.0.0.0'
     }
 }

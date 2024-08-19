@@ -1,0 +1,1 @@
+ -keep class com.im_flutter_sdk_push_xiaomi.xiaomi.XiaomiMessageService {*;}
