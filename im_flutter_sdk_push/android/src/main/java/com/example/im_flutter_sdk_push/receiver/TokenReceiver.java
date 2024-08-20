@@ -34,13 +34,14 @@ public  class TokenReceiver extends BroadcastReceiver {
             try{
                 final String err = intent.getStringExtra(PushIntent.TOKEN_ERROR.id());
                 if(err != null) { // 如果获取token失败
-                    this.events.error(err, err, Utils.getPlatform().toUpperCase());
+                    final String desc = intent.getStringExtra(PushIntent.TOKEN_ERROR_DESC.id());
+                    this.events.error(err, desc, Utils.getPlatform().toUpperCase());
                 }else {
                     final String token = intent.getStringExtra(PushIntent.TOKEN.id());
                     this.events.success(token);
                 }
             }catch (Exception e) {
-                this.events.error("", e.getMessage(), Utils.getPlatform().toUpperCase());
+                this.events.error(e.getMessage(), e.getMessage(), Utils.getPlatform().toUpperCase());
             }
         }
     }

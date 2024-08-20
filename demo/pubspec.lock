@@ -82,6 +82,13 @@ packages:
       relative: true
     source: path
     version: "0.0.1"
+  im_flutter_sdk_push_honor:
+    dependency: "direct main"
+    description:
+      path: "../im_flutter_sdk_push_honor"
+      relative: true
+    source: path
+    version: "0.0.1"
   im_flutter_sdk_push_huawei:
     dependency: "direct main"
     description:

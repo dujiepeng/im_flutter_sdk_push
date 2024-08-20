@@ -57,6 +57,9 @@ dependencies:
   im_flutter_sdk_push_xiaomi:
     path: ../im_flutter_sdk_push_xiaomi
 
+  im_flutter_sdk_push_honor:
+    path: ../im_flutter_sdk_push_honor  
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

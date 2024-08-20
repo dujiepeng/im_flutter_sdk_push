@@ -16,7 +16,7 @@ public class OppoTokenHelper extends TokenHelper {
     public void getToken() {
 
         if(!HeytapPushManager.isSupportPush(context)) {
-            Utils.sendTokenError(context, "no support push");
+            Utils.sendTokenError(context, "-1", "no support push");
             return;
         }
         HeytapPushManager.requestNotificationPermission();
@@ -55,7 +55,7 @@ public class OppoTokenHelper extends TokenHelper {
 
                 @Override
                 public void onError(int i, String s) {
-                    Utils.sendTokenError(context, s);
+                    Utils.sendTokenError(context, ""+ i, s);
                 }
             });
         }else {

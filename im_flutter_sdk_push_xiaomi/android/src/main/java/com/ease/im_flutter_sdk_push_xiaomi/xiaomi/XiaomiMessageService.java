@@ -26,7 +26,7 @@ public class XiaomiMessageService  extends PushMessageReceiver {
             if (message.getResultCode() == ErrorCode.SUCCESS) {
                 Utils.sendToken(context, cmdArg1);
             }else {
-                Utils.sendTokenError(context, cmdArg1);
+                Utils.sendTokenError(context, "" + message.getResultCode(), cmdArg1);
             }
         }
     }
@@ -40,7 +40,7 @@ public class XiaomiMessageService  extends PushMessageReceiver {
             if (message.getResultCode() == ErrorCode.SUCCESS) {
                 Utils.sendToken(context, cmdArg1);
             }else {
-                Utils.sendTokenError(context, cmdArg1);
+                Utils.sendTokenError(context, "" + message.getResultCode(), cmdArg1);
             }
         }
     }

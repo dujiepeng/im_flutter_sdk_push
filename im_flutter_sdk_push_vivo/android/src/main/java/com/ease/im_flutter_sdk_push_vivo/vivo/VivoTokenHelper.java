@@ -36,16 +36,16 @@ public class VivoTokenHelper extends TokenHelper {
 
                             @Override
                             public void onFail(Integer errCode) {
-                                Utils.sendTokenError(context, errCode.toString());
+                                Utils.sendTokenError(context, errCode.toString(), null);
                             }
                         });
                     } else {
-                        Utils.sendTokenError(context, "TurnOnPush Error: " + i);
+                        Utils.sendTokenError(context, "" + i, null);
                     }
                 }
             });
         } catch (VivoPushException e) {
-            Utils.sendTokenError(context, "Config Push Error");
+            Utils.sendTokenError(context, ""+ e.getCode(), e.getMessage());
         }
     }
 }

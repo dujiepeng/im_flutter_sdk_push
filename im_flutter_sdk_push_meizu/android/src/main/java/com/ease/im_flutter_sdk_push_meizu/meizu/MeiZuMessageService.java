@@ -19,12 +19,12 @@ public class MeiZuMessageService extends MzPushMessageReceiver {
         super.onRegisterStatus(context, registerStatus);
         if(registerStatus.getCode().equals(SUCCESS_CODE)){
             if(PluginContext.getContext() == null) {
-                Utils.sendTokenError(PluginContext.getContext(),"Plugin context is null.");
+                Utils.sendTokenError(PluginContext.getContext(),"-1", "Plugin context is null.");
             }else {
                 Utils.sendToken(PluginContext.getContext(), registerStatus.getPushId());
             }
         }else {
-            Utils.sendTokenError(PluginContext.getContext(), "Get token error.");
+            Utils.sendTokenError(PluginContext.getContext(), registerStatus.getCode() ,"Get token error.");
         }
     }
 

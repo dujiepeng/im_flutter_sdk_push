@@ -6,17 +6,11 @@
 
   <application>
       <service
-          android:name="com.ease.im_flutter_sdk_push_huawei.hms.EaseHmsMessageService"
+          android:name="com.ease.im_flutter_sdk_push_huawei.hms.HmsMessagesService"
           android:exported="false">
           <intent-filter>
               <action android:name="com.huawei.push.action.MESSAGING_EVENT" />
           </intent-filter>
       </service>
-      <!-- This receiver is for local notification click actions
-      <receiver android:name="com.huawei.hms.flutter.push.receiver.local.HmsLocalNotificationActionsReceiver" />
-      <service
-          android:name="com.huawei.hms.flutter.push.backgroundmessaging.BackgroundMessagingService"
-          android:exported="true"
-          android:permission="android.permission.BIND_JOB_SERVICE" /> -->
   </application>
 </manifest>
